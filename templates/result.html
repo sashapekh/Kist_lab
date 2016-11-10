@@ -1,0 +1,28 @@
+{% load staticfiles %}
+{% load render_table from django_tables2 %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="col-md-6 text-center" >
+    <h1>Результат запроса</h1>
+    {% render_table query_result %}
+    <hr>
+    {% render_table query_group_name %}
+
+     <a href="{% url 'main_page' %}"><button class="btn btn-danger" style="margin-top: 40px">Вернуться на главную</button></a>
+</div>
+
+
+    <h1>test_var = {{ test_var }}</h1>
+</body>
+</html>
