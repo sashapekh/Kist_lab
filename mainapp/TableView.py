@@ -35,7 +35,18 @@ class Query2Table(tables.Table):
 class Query3Table(tables.Table):
     surname = tables.Column()
     name = tables.Column()
-    patronymic = tables.Column()
+    Patronymic = tables.Column()
     birth_day = tables.Column()
     address = tables.Column()
-    
+    telephone = tables.Column()
+    contract_sum = tables.Column()
+
+    class Meta:
+        attrs = {'class': 'paleblue'}
+
+
+class Query4Table(Query3Table):
+
+    class Meta:
+        exclude = {'contract_sum'}
+        attrs = {'class': 'paleblue'}
