@@ -128,3 +128,9 @@ STATICFILES_DIRS = (
 )
 
 STATIC_URL = '/static/'
+
+ALLOWED_HOSTS = [
+    '192.168.1.156',
+    '127.0.0.1',
+    '192.168.11.1',
+]

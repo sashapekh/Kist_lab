@@ -32,6 +32,9 @@
             {% render_table student_mark %}
 
 
+
+
+
         </div>
     </div>
 
@@ -56,7 +59,7 @@
                     <h4 class="modal-title" id="myModalLabel">Query 1</h4>
                   </div>
                   <div class="modal-body">
-                    {% render_table quer1 %}
+                    {% render_table query1 %}
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -68,7 +71,7 @@
         </div>
         <hr>
         <h2>Query 2</h2>
-        <h4>Для определенного студента вывести название группы , специальность , название кафедры</h4>
+        <h4>Для определенного студента вывести название кафедры , название группы и специальность</h4>
             <form action="/result/" method="get">
                 {% csrf_token %}
                       <div class="form-group">
@@ -83,7 +86,11 @@
                           <input type="submit" value="Поиск" class="btn btn-primary"  >
                       </div>
             </form>
-
+        <hr>
+        <h2>Query 3</h2>
+        <h4>Вывести всех студентов , цену за обучение дневной формы образования которые вступили на контракт между 2013 и 2016
+            годом и оплатили за этот период
+        </h4>
     </div>
 
 

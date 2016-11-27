@@ -96,8 +96,8 @@ class Scontract_kind(models.Model):
 
 class Contract(models.Model):
     contract_id = models.AutoField(primary_key=True)
-    student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
-    contract_kind_id = models.ForeignKey(Scontract_kind, on_delete=models.CASCADE)
+    student_id = models.OneToOneField(Student, on_delete=models.CASCADE)
+    contract_kind_id = models.OneToOneField(Scontract_kind, on_delete=models.CASCADE)
     contract_date = models.DateField(null=False)
     contract_sum = models.CharField(max_length=15, null=False)
     payer_kind = models.CharField(max_length=15, null=False)
@@ -112,6 +112,9 @@ class Payment(models.Model):
     payment_date = models.DateField(null=False)
     payment_sum = models.CharField(max_length=15, null=False)
     document_no = models.CharField(max_length=10, null=False)
+
+    def __str__(self):
+        return str(self.contract_id)
 
 
 class Student_group(models.Model):

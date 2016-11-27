@@ -13,16 +13,15 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 </head>
 <body>
-<div class="col-md-6 text-center" >
+<div class="col-md-12 text-center" >
     <h1>Результат запроса</h1>
+    <!-- выполнения 2 запроса по заданию -->
     {% render_table query_result %}
     <hr>
-    {% render_table query_group_name %}
-
-     <a href="{% url 'main_page' %}"><button class="btn btn-danger" style="margin-top: 40px">Вернуться на главную</button></a>
+    <a href="{% url 'main_page' %}"><button class="btn btn-danger" style="margin-top: 40px">Вернуться на главную</button></a>
 </div>
 
 
-    <h1>test_var = {{ test_var }}</h1>
+
 </body>
 </html>

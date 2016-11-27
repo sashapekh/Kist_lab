@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>ee2451ce-8e79-4430-b95c-aa0f7061d8f5.SCHEMA:kist_db.public</OriginalElement>
+  <nodes>
+    <node x="730.2453703703704" y="1278.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_group</node>
+    <node x="0.0" y="457.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_scontract_kind</node>
+    <node x="301.5" y="190.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_speciality</node>
+    <node x="311.0" y="848.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_payment</node>
+    <node x="921.9953703703704" y="1033.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_migrations</node>
+    <node x="518.2731481481482" y="1256.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_permission</node>
+    <node x="0.0" y="1501.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_admin_log</node>
+    <node x="1139.9953703703704" y="1033.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_session</node>
+    <node x="935.25" y="457.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_smark</node>
+    <node x="688.9953703703704" y="1556.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_group_permissions</node>
+    <node x="623.25" y="402.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student</node>
+    <node x="515.8055555555555" y="1556.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user_groups</node>
+    <node x="990.5" y="146.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_person</node>
+    <node x="839.0" y="669.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student_marks</node>
+    <node x="780.5" y="212.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_sfinance</node>
+    <node x="318.0" y="0.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_cafedra</node>
+    <node x="276.70833333333337" y="1556.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user_user_permissions</node>
+    <node x="252.0" y="435.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_groups</node>
+    <node x="565.5" y="212.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_sdiploma</node>
+    <node x="198.05555555555557" y="1033.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_content_type</node>
+    <node x="303.5" y="636.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_contract</node>
+    <node x="173.20833333333337" y="1179.0">ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_payment" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_contract">
+      <point x="0.0" y="-70.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_person">
+      <point x="109.5" y="-92.0" />
+      <point x="878.75" y="382.0" />
+      <point x="1144.0" y="382.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_group_permissions" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_permission">
+      <point x="-47.0" y="-48.0" />
+      <point x="735.9953703703704" y="1471.0" />
+      <point x="648.0231481481482" y="1471.0" />
+      <point x="43.25" y="59.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_sfinance">
+      <point x="36.5" y="-92.0" />
+      <point x="805.75" y="372.0" />
+      <point x="875.5" y="372.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_permission" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_content_type">
+      <point x="0.0" y="-59.0" />
+      <point x="604.7731481481482" y="1154.0" />
+      <point x="321.05555555555554" y="1154.0" />
+      <point x="41.0" y="48.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_sdiploma">
+      <point x="-36.5" y="-92.0" />
+      <point x="732.75" y="372.0" />
+      <point x="663.0" y="372.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user_user_permissions" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user">
+      <point x="-53.0" y="-48.0" />
+      <point x="0.0" y="136.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_speciality" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_cafedra">
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_speciality">
+      <point x="-109.5" y="-92.0" />
+      <point x="659.75" y="382.0" />
+      <point x="484.5" y="382.0" />
+      <point x="61.0" y="59.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student_marks" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student">
+      <point x="-46.75" y="-48.0" />
+      <point x="885.75" y="611.0" />
+      <point x="842.25" y="611.0" />
+      <point x="73.0" y="92.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user_groups" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_group">
+      <point x="38.25" y="-48.0" />
+      <point x="630.5555555555555" y="1481.0" />
+      <point x="763.4953703703704" y="1481.0" />
+      <point x="-33.25" y="37.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_group_permissions" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_group">
+      <point x="47.0" y="-48.0" />
+      <point x="33.25" y="37.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user_groups" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user">
+      <point x="-38.25" y="-48.0" />
+      <point x="554.0555555555555" y="1471.0" />
+      <point x="434.0416666666667" y="1471.0" />
+      <point x="104.33333333333331" y="136.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_contract" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student">
+      <point x="68.75" y="-81.0" />
+      <point x="509.75" y="611.0" />
+      <point x="696.25" y="611.0" />
+      <point x="-73.0" y="92.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_groups" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_speciality">
+      <point x="0.0" y="-59.0" />
+      <point x="-61.0" y="59.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_admin_log" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_content_type">
+      <point x="-63.25" y="-103.0" />
+      <point x="63.25" y="1154.0" />
+      <point x="239.05555555555557" y="1154.0" />
+      <point x="-41.0" y="48.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user_user_permissions" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_permission">
+      <point x="53.0" y="-48.0" />
+      <point x="435.70833333333337" y="1481.0" />
+      <point x="561.5231481481482" y="1481.0" />
+      <point x="-43.25" y="59.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.django_admin_log" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.auth_user">
+      <point x="63.25" y="-103.0" />
+      <point x="189.75" y="1481.0" />
+      <point x="225.37500000000006" y="1481.0" />
+      <point x="-104.33333333333333" y="136.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_student_marks" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_smark">
+      <point x="46.75" y="-48.0" />
+      <point x="979.25" y="611.0" />
+      <point x="1022.75" y="611.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_contract" target="ee2451ce-8e79-4430-b95c-aa0f7061d8f5.TABLE:kist_db.public.mainapp_scontract_kind">
+      <point x="-68.75" y="-81.0" />
+      <point x="372.25" y="611.0" />
+      <point x="116.0" y="611.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8181464202893745" x="709.2874689578316" y="524.9396032049036" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+
