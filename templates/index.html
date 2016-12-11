@@ -13,94 +13,159 @@
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </head>
 <body>
-    <div class="col-md-6 text-center">
-        <h1>Вывод данных из таблиц</h1>
-
-        <h3>Таблица "Person"</h3>
-        <div>
-            <hr>
-            {% render_table person %}
-        </div>
-        <h3>Таблица "Student"</h3>
-        <div>
-            <hr>
-            {% render_table student %}
-        </div>
-        <h3>Таблица "Student marks"</h3>
-        <div>
-            <hr>
-            {% render_table student_mark %}
 
 
-
-
-
-        </div>
-    </div>
-
-    <div class="col-md-6" style="margin-bottom: 20px;">
+    <div class="col-md-offset-1 col-md-8" style="margin-bottom: 20px;">
         <h1>Выборка данных из таблицы</h1>
 
         <div>
-            <hr>
-            <h2>Query 1</h2>
-            <h4>Выбрать всех студентов которые получили среднюю оценку выше 4.0 и учатся на контракте</h4>
-           <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal_query1">
-                Показать результат
-            </button>
+                <div class="query_1 col-md-12">
 
-<!-- Modal -->
-        <div class="modal fade" id="Modal_query1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Query 1</h4>
-                  </div>
-                  <div class="modal-body">
-                    {% render_table query1 %}
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
+                        <h2 class="text-center">Запрос 1</h2>
+                        <h4>Выбрать всех студентов которые получили среднюю оценку выше 4.0 и учатся на контракте</h4>
+                        <form  action="/result_qur_2/" method="get">
+                            {% csrf_token %}
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                <h4>Оценка для выборки</h4>
+                                <select name="mark_name" id="query_1_select">
+                                    {% for item in mark_name %}
+                                        <option name="mark_name" value="{{ item.mark_name }}">{{ item.mark_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>Выбрать студента</h4>
+                                <select name="name_surname" id="query_1_select">
+                                    {% for item in student_name %}
+                                        <option name="name_surname" value="{{ item.name }}  {{ item.surname }}">{{ item.name }}  {{ item.surname }}</option>
+                                    {% endfor %}
+
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>выбрать кафедру</h4>
+                                <select name="cafedra_name" id="query_1_select">
+                                    {% for item in cafedra_name %}
+                                        <option name="cafedra_name" value="{{ item.cafedra_name }}">{{ item.cafedra_name }}</option>
+                                    {% endfor %}
+
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <button class="btn btn-primary " type="submit">Выполнить</button>
+                            </div>
+
+
+                        </form>
+
                 </div>
-              </div>
+
+            <div class="query_2 col-md-12" style="margin-top: 30px;">
+                <hr>
+                <h2>Query 2</h2>
+            <h4>Для определенного студента вывести название кафедры , название группы и специальность</h4>
+                <form  action="/result/" method="get">
+                    {% csrf_token %}
+                          <div class="form-group">
+                            <label for="formGroupExampleInput">Имя</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" name="name" >
+                          </div>
+                          <div class="form-group">
+                            <label for="formGroupExampleInput2">Фамилия</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" name="surname">
+                          </div>
+                          <div class="form-group">
+                              <input type="submit" value="Поиск" class="btn btn-primary"  >
+                          </div>
+                </form>
+
             </div>
 
-        </div>
-        <hr>
-        <h2>Query 2</h2>
-        <h4>Для определенного студента вывести название кафедры , название группы и специальность</h4>
-            <form action="/result/" method="get">
-                {% csrf_token %}
-                      <div class="form-group">
-                        <label for="formGroupExampleInput">Имя</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" name="name" >
-                      </div>
-                      <div class="form-group">
-                        <label for="formGroupExampleInput2">Фамилия</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" name="surname">
-                      </div>
-                      <div class="form-group">
-                          <input type="submit" value="Поиск" class="btn btn-primary"  >
-                      </div>
-            </form>
-        <hr>
-        <h2>Query 3</h2>
-        <h4>Вывести всех студентов , цену за обучение дневной формы образования которые вступили на контракт между 2013 и 2016
-            годом и оплатили за этот период
             <hr>
-            {% render_table query3 %}
-        </h4>
+            <div class="query_3 col-md-12">
+                <h2 class="text-center">Запрос 3</h2>
+            <h4>Вывести всех студентов , цену за обучение дневной формы образования которые вступили на контракт между 2013 и 2016
+                годом и оплатили за этот период
+                <hr>
+                <div class="query_3 col-md-12">
+                    <form action="/result_3_query/" method="get">
+                        {% csrf_token %}
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h4>Выберите год</h4>
+                                <select name="year" id="">
 
-        <hr>
-        <h2>Query 4</h2>
-        <h4>Выбрать всех студентов женского пола которые учатся на бюджете и имеют оценку 4 или выше</h4>
-        <hr>
-        {% render_table query4 %}
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h4>Выберите месяц</h4>
+                                <select name="month" id="">
+
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                        </div>
+                    <button type="submit" class="btn btn-primary">отправить</button>
+                    </form>
+                </div>
+
+            </h4>
+            </div>
+
+
+            <hr>
+        <div class="query_4 col-md-12">
+            <h2 class="text-center">Запрос 4</h2>
+            <h4>Выбрать всех студентов женского пола которые учатся на бюджете и имеют оценку 4 или выше</h4>
+            <hr>
+            <form action="/result_4_query/">
+            {% csrf_token %}
+                <div class="form-group col-md-6">
+                    <h4>Выбрать студентов на контате или бюджет</h4>
+                    <select name="budget" id="">
+                        <option value="Бюджет(+)">Бюджет(+)</option>
+                        <option value="Бюджет(-)">Бюджет(-)</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <h4>Выбрать оценку</h4>
+                     <select name="mark_name" id="query_1_select">
+                         {% for item in mark_name %}
+                             <option name="mark_name" value="{{ item.mark_name }}">{{ item.mark_name }}</option>
+                         {% endfor %}
+                     </select>
+                </div>
+                <div class="form-group col-md-12">
+                    <button class="btn btn-primary" type="submit">Выполнить</button>
+                </div>
+                <
+            </form>
+        </div>
+
     </div>
-
+    </div>
 
 </body>
 </html>

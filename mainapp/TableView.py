@@ -23,29 +23,41 @@ class StudentMarksTable(tables.Table):
         exclude = {'id'}
 
 
+class Query1Table(tables.Table):
+    name = tables.Column('Имя')
+    surname = tables.Column("Фалимия")
+    cafedra_name = tables.Column("Кафедра")
+    mark_name = tables.Column("Оценка")
+    contract_sum = tables.Column("Цена за контракт")
+
+    class Meta:
+        attrs = {'class': 'paleblue'}
+
+
 class Query2Table(tables.Table):
-    cafedra_name = tables.Column()
-    group_code = tables.Column()
-    speciality_name = tables.Column()
+    cafedra_name = tables.Column("Имя кафедры")
+    group_code = tables.Column("Название группы(код группы)")
+    speciality_name = tables.Column("Название специальности")
 
     class Meta:
         attrs = {'class': 'paleblue'}
 
 
 class Query3Table(tables.Table):
-    surname = tables.Column()
-    name = tables.Column()
-    Patronymic = tables.Column()
-    birth_day = tables.Column()
-    address = tables.Column()
-    telephone = tables.Column()
-    contract_sum = tables.Column()
+    name = tables.Column('Имя')
+    surname = tables.Column("Фалимия")
+    contract_kind_name = tables.Column('Тип контракта')
+    contract_date = tables.Column('Дата оформления контракта')
 
     class Meta:
         attrs = {'class': 'paleblue'}
 
 
-class Query4Table(Query3Table):
+class Query4Table(tables.Table):
+    name = tables.Column("Имя")
+    surname = tables.Column("Фамилия")
+    sex = tables.Column("Стать")
+    finance_name = tables.Column("Контракт или бюджет")
 
     class Meta:
         exclude = {'contract_sum'}
