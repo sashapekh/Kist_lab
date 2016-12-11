@@ -103,7 +103,7 @@ def result_qur_2(request):
 def result_3_query(request):
     message = request.GET
     cursor = connections['default'].cursor()
-    cursor.execute('''select DISTINCT  p.name,p.surname,skind.contract_kind_name,contract.contract_sum, contract.contract_date from mainapp_contract as contract
+    cursor.execute('''select DISTINCT p.name,p.surname,skind.contract_kind_name,contract.contract_sum,payment.payment_sum, contract.contract_date from mainapp_contract as contract
   JOIN mainapp_student as student on contract.student_id_id = student.student_id
   JOIN mainapp_person as p on student.person_student_fk_id = p.person_id
   JOIN mainapp_scontract_kind as skind on contract.contract_kind_id_id = skind.contract_kind_id

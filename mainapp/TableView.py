@@ -29,6 +29,7 @@ class Query1Table(tables.Table):
     cafedra_name = tables.Column("Кафедра")
     mark_name = tables.Column("Оценка")
     contract_sum = tables.Column("Цена за контракт")
+    score = tables.Column()
 
     class Meta:
         attrs = {'class': 'paleblue'}
@@ -48,6 +49,8 @@ class Query3Table(tables.Table):
     surname = tables.Column("Фалимия")
     contract_kind_name = tables.Column('Тип контракта')
     contract_date = tables.Column('Дата оформления контракта')
+    contract_sum = tables.Column('Сумма контракта')
+    payment_sum = tables.Column('Сумма оплаты')
 
     class Meta:
         attrs = {'class': 'paleblue'}
